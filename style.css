@@ -1,72 +1,109 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background: #0a0a0f;
-  color: white;
 }
 
-/* NAV */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
+body {
+  line-height: 1.6;
+  color: #333;
 }
 
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* HERO */
+.section {
+  padding: 60px 0;
+}
+
+.section.alt {
+  background: #f4f4f4;
+}
+
+/* Hero */
 .hero {
-  padding: 80px 40px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 60px;
-}
-
-.hero h1 span {
-  color: #8b5cf6;
+  font-size: 3rem;
 }
 
 .hero h2 {
-  margin: 20px 0;
-  font-weight: normal;
+  margin: 10px 0;
+  font-weight: 400;
 }
 
-.buttons a {
-  display: inline-block;
-  margin-right: 15px;
-  padding: 10px 20px;
-  background: #8b5cf6;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.stats {
-  display: flex;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-/* SECTIONS */
-section {
-  padding: 40px;
-}
-
-.card {
-  background: #111827;
-  padding: 20px;
+.hero p {
   margin: 15px 0;
-  border-radius: 10px;
 }
 
-/* FOOTER */
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card .meta {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Links */
+.links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  opacity: 0.6;
+  background: #111;
+  color: #fff;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
